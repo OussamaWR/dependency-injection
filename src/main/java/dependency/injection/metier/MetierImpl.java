@@ -8,9 +8,19 @@ public class MetierImpl  implements  IMetier{
 
     private IDao dao;
 
+    /** for inject to our attribute doa an object
+     * of the class that will implement the interface IDao
+     * this setter will facilitate dependency injection
+     */
+    public void setDao(IDao dao){
+        this.dao = dao;
+    }
+
+
     @Override
     public double calcul() {
         double data = dao.getData();
-        return 0;
+        double res = data*23;
+        return res;
     }
 }
