@@ -11,5 +11,13 @@ public class Display {
         metier.setDao(dao);
         double  data = metier.calcul();
         System.out.println("data => "+data);
+
+
+        // ___________________________________________________
+        DaoImpl dao2 = new DaoImpl();
+        MetierImpl metier2 = new MetierImpl(dao2);
+        double data2 = metier2.calcul();
+        System.out.println("data2 => "+data2);
+
     }
 }
